@@ -30,7 +30,7 @@ npm install
 
 Set environment (vars):
 ```sh
-cp .env.example .env
+cp /env/development.json.reference env/development.json
 ```
 
 Start the server:
@@ -65,7 +65,7 @@ Universal logging library [winston](https://www.npmjs.com/package/winston) is us
 
 ## Features to be added in future
 
-1. Login feature - Maintaining session using redis.
+1. Login feature - Maintaining session using redis. Also, add token based authentication to the REST API.
 2. Editing an already submitted review.
 3. Allow only 1 review per login/email id.
 4. Caching for results of list of restaurants on home page. So that the API call is not made every time the page is loaded.

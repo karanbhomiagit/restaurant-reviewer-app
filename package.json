@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Restaurant Reviewer App - Search for Restaurants near you, Read and Add reviews.",
   "engines": {
-    "node": "0.12.x"
+    "node": "4.0.0"
   },
   "author": "Karan Bhomia",
   "license": "MIT",
