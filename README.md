@@ -50,11 +50,14 @@ make test
 npm run coverage
 ```
 
-##### Deployment
+## Deployment
+
+
 
 ## CI
 
 Travis CI has already been integrated. The build is triggered at git commit/push.
+![CI](/static/images/travis.png?raw=true)
 
 ## Logging
 

@@ -1,5 +1,5 @@
 /*
-  This is the entry point for the Mongopop Express app; it's invoked
+  This is the entry point for the Express app; it's invoked
   from `/bin/www`
 */
 var nconf = require('nconf').argv().env()
