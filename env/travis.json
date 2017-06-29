@@ -1,0 +1,5 @@
+{
+  "mongooseURI" : "mongodb://admin:admin@ds139122.mlab.com:39122/restaurant-reviewer-app",
+  "yelp_client_id" : "ONfHAywmL_3aRDd_CAhhRA",
+  "yelp_client_secret" : "yNrOKI0av5MkLzp7dXmMuPG7vHofwZbjrXbx17gBtqQcqtowKw5syqKSJds1wQ3t"
+}

@@ -1,9 +1,19 @@
 /*
   This is the entry point for the Mongopop Express app; it's invoked
-  from `Mongopop/bin/www`
+  from `/bin/www`
 */
+var nconf = require('nconf').argv().env()
+
+if(process.env.NODE_ENV === 'unittest')
+  nconf.file('env/unittest.json');
+else if (process.env.NODE_ENV === 'travis')
+  nconf.file('env/travis.json');
+else if (process.env.NODE_ENV === 'development')
+  nconf.file('env/development.json');
+
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://admin:admin@ds139122.mlab.com:39122/restaurant-reviewer-app');
+nconf = require('nconf')
+mongoose.connect(nconf.get('mongooseURI'));
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');

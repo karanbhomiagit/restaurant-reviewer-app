@@ -1,0 +1,5 @@
+{
+  "mongooseURI" : "add_your_own",
+  "yelp_client_id" : "add_your_own",
+  "yelp_client_secret" : "add_your_own",
+}

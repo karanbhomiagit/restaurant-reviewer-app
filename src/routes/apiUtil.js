@@ -2,6 +2,7 @@
 var request = require('request')
 var logger = require('winston')
 var Review = require('../../models/review.js')
+var nconf = require('nconf')
 
 exports.getRestaurants = function(req, res, next) {
   var errors = []
@@ -52,8 +53,8 @@ function getBearerTokenForYelp(callback) {
      { 'content-type': 'application/x-www-form-urlencoded' },
     form:
      { grant_type: 'client_credentials',
-       client_id: 'ONfHAywmL_3aRDd_CAhhRA',
-       client_secret: 'yNrOKI0av5MkLzp7dXmMuPG7vHofwZbjrXbx17gBtqQcqtowKw5syqKSJds1wQ3t'
+       client_id: nconf.get('yelp_client_id'),
+       client_secret: nconf.get('yelp_client_secret')
      }
   }
 
@@ -123,7 +124,7 @@ exports.getReviewsByRestaurantId = function(req, res, next) {
 }
 
 exports.deleteReviewById = function(req, res, next) {
-  var query = {restaurantId: req.params._restaurantId, _id : req.params._id}
+  var query = {restaurantId: req.params._restaurantId, _id : req.params._reviewId}
   Review.findOneAndRemove(query, function (err, doc) {
     if (err) return next(err)
     return res.status(204).json({})

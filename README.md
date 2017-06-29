@@ -12,8 +12,8 @@ The app uses Yelp Business Search V3 API to load real time data for restaurants 
 ![Restaurant detail](/static/images/restaurant.png?raw=true)
 ![Restaurant reviews](/static/images/restaurant-2.png?raw=true)
 
-## Code coverage
-![Code Coverage](/static/images/codeCoverage-29/6/2017.png?raw=true)
+## Code coverage (29/6/2017)
+![Code Coverage](/static/images/codeCoverage.png?raw=true)
 
 ## Getting Started
 
@@ -35,7 +35,7 @@ cp .env.example .env
 
 Start the server:
 ```js
-npm start
+NODE_ENV=development npm start
 ```
 
 Open http://localhost:8081
@@ -48,9 +48,13 @@ make test
 
 # Run test along with code coverage
 npm run coverage
+```
 
 ##### Deployment
 
+## CI
+
+Travis CI has already been integrated. The build is triggered at git commit/push.
 
 ## Logging
 
@@ -74,6 +78,7 @@ Universal logging library [winston](https://www.npmjs.com/package/winston) is us
 Contributions, questions and comments are all welcome and encouraged. For code contributions submit a pull request with unit test.
 
 ## License
+
 This project is licensed under the [MIT License](https://github.com/karanbhomiagit/restaurant-reviewer-app/blob/master/LICENSE)
 
 ## Meta
