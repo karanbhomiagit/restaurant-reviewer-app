@@ -14,13 +14,13 @@ The app uses Yelp Business Search V3 API to load real time data for restaurants 
 
 ## How does the app work?
 1. The app is based upon REST APIs built using Node.js and Express.
-  a. Mongoose is used to connect to the database.
-  b. The database only stores the reviews, the restaurant data is loaded in real-time by making API calls to Yelp.
-  c. API routes have been defined to search for restaurants, get details of a particular restaurant. These APIs do not interact with the database.
-  d. API routes for GET, POST, DELETE a review interact with the Yelp APIs as well as the database.
+  1. Mongoose is used to connect to the database.
+  2. The database only stores the reviews, the restaurant data is loaded in real-time by making API calls to Yelp.
+  3. API routes have been defined to search for restaurants, get details of a particular restaurant. These APIs do not interact with the database.
+  4. API routes for GET, POST, DELETE a review interact with the Yelp APIs as well as the database.
 2. The frontend has been built using Angular 2.
-  a. HTML embedded in Typescript is used to load web pages.
-  b. A data service has been written which interacts with the backend REST APIs.
+  1. HTML embedded in Typescript is used to load web pages.
+  2. A data service has been written which interacts with the backend REST APIs.
 
 ## Getting Started
 
