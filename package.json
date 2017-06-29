@@ -1,0 +1,82 @@
+{
+  "name": "restaurant-reviewer-app",
+  "version": "0.0.1",
+  "description": "Restaurant Reviewer App - Search for Restaurants near you, Read and Add reviews.",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "author": "Karan Bhomia",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/cli": "1.0.2",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "express": "3.21.2",
+    "mongoose": "3.8.35",
+    "body-parser": "~1.0.1",
+    "async": "1.4.2",
+    "fs": "0.0.2",
+    "jsonpath": "0.2.6",
+    "lodash": "2.4.1",
+    "moment": "^2.10.3",
+    "request": "2.61.0",
+    "winston": "2.2.0",
+    "crypto": "0.0.3",
+    "xml2js": "0.4.16",
+    "debug": "~2.2.0",
+    "ee-first": "^1.1.1",
+    "ejs": "^2.5.2",
+    "external-ip": "^0.2.4",
+    "jade": "~1.11.0",
+    "methods": "^1.1.2",
+    "mongodb": "^2.2.5",
+    "morgan": "~1.7.0",
+    "pug": "^0.1.0",
+    "serve-favicon": "~2.3.0",
+    "tsc": "^1.20150623.0"
+  },
+  "devDependencies": {
+    "mocha": "2.2.5",
+    "should": "7.0.4",
+    "sinon": "1.9.1",
+    "istanbul": "0.3.18",
+    "chai": "1.9.1",
+    "chai-as-promised": "4.1.1",
+    "request-debug": "0.0.3",
+    "csv-parse": "1.0.x",
+    "oboe": "2.1.2",
+    "soap": "0.9.1",
+    "randomstring": "1.1.5"
+  },
+  "standard": {
+    "globals": [
+      "test",
+      "$E",
+      "rootRequire",
+      "describe",
+      "it",
+      "before",
+      "after",
+      "beforeEach",
+      "emailer",
+      "window"
+    ]
+  },
+  "scripts": {
+    "start": "cd public && npm run tsc && cd .. && node ./bin/www",
+    "debug": "cd public && npm run tsc && cd .. && node-debug ./bin/www",
+    "tsc": "cd public && npm run tsc",
+    "tsc:w": "cd public && npm run tsc:w",
+    "express": "node ./bin/www",
+    "express-debug": "node-debug ./bin/www",
+    "postinstall": "cd public && npm install",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --recursive"
+  }
+}
