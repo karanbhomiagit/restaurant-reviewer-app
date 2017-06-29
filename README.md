@@ -1,26 +1,36 @@
 ## Overview
 
-This is a Restaurant Reviewer application built using Angular 2 for frontend and REST APIs in Node.js using Express for backend.
-It lets the users search for restaurants near their location, read the reviews and submit a review.
+This is a Restaurant Reviewer application built using Angular 2 for frontend and REST APIs in Node.js(using Express) for backend.
+It lets the users search for restaurants near their location, read the reviews for the restaurants and submit reviews for the same.
 
 The app uses Yelp Business Search V3 API to load real time data for restaurants at a particular location.
 
 ## Home Screen
+The users can enter their location and click "Search" to load the list of restaurants (sorted by distance)
+The restaurant tile shows the Restaurant Name, Address and Category for the restaurant.
+
 ![Home screen](/static/images/home.png?raw=true)
 
 ## Restaurant detail screen
+Opens up when you click on a restaurant tile on home page.
+"Back" button navigates you back to the home page.
+
 ![Restaurant detail](/static/images/restaurant.png?raw=true)
 ![Restaurant reviews](/static/images/restaurant-2.png?raw=true)
 
+Clicking on "Submit" saves the review.
+
+
 ## How does the app work?
-1. The app is based upon REST APIs built using Node.js and Express.
-  1. Mongoose is used to connect to the database.
-  2. The database only stores the reviews, the restaurant data is loaded in real-time by making API calls to Yelp.
-  3. API routes have been defined to search for restaurants, get details of a particular restaurant. These APIs do not interact with the database.
-  4. API routes for GET, POST, DELETE a review interact with the Yelp APIs as well as the database.
-2. The frontend has been built using Angular 2.
-  1. HTML embedded in Typescript is used to load web pages.
-  2. A data service has been written which interacts with the backend REST APIs.
+
+* The app is based upon REST APIs built using Node.js and Express.
+  * Mongoose is used to connect to the database.
+  * The database only stores the reviews, the restaurant data is loaded in real-time by making API calls to Yelp.
+  * API routes have been defined to search for restaurants, get details of a particular restaurant. These APIs do not interact with the database.
+  * API routes for GET, POST, DELETE a review interact with the Yelp APIs as well as the database.
+* The frontend has been built using Angular 2.
+  * HTML embedded in Typescript is used to load web pages.
+  * A data service has been written which interacts with the backend REST APIs.
 
 ## Getting Started
 
@@ -63,6 +73,7 @@ Travis CI has already been integrated. The build is triggered at git commit/push
 ![CI](/static/images/travis.png?raw=true)
 
 ## Code coverage (29/6/2017)
+
 ![Code Coverage](/static/images/codeCoverage.png?raw=true)
 
 ## Steps for deployment on Heroku
