@@ -50,9 +50,15 @@ make test
 npm run coverage
 ```
 
-## Deployment
+## Steps for deployment on Heroku
 
-
+1. Download the heroku-cli
+2. Clone : https://github.com/heroku/node-js-getting-started.git
+3. Create, deploy and open a Heroku app. (heroku create, git push heroku master, heroku open)
+4. Define a procfile. (web: npm start)
+5. Run the app locally. (heroku local web)
+6. Push local changes.
+7. Add a database to your app. (heroku addons:create heroku-postgresql:hobby-dev)
 
 ## CI
 
